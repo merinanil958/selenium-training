@@ -1,0 +1,27 @@
+package com.maven.project.demotour;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class pagefactorywelcome {
+	WebElement txtWelcome ;
+	WebDriver driver;
+	
+	public pagefactorywelcome(WebDriver driver)
+	{
+		this.driver=driver; //localdriver
+	}
+	
+	//** this method validates the text
+	//return method
+		
+	public boolean isWelcomeTextAvailable() {
+		
+		 txtWelcome = driver.findElement(By.name("welcome"));
+		 boolean status;
+		status=txtWelcome.getText().equals("welcome");
+		return status;
+	}
+
+}
